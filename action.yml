@@ -1,0 +1,14 @@
+name: 'GitHub Action for `swift test`'
+description: 'Runs simple `swift test` command'
+author: '417-72KI <417_72ki@gmail.com>'
+inputs:
+  swift-version:
+    description: Swift version
+    required: true
+    default: latest
+runs:
+  using: 'docker'
+  image: 'swift-${{ inputs.swift-version }}/Dockerfile'
+branding:
+  icon: 'alert-circle'
+  color: 'purple'
